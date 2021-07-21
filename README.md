@@ -8,9 +8,9 @@ To create the campaign in Mailchimp:
 
 `ruby mailchimp.rb 2021-july create`
 
-Then, send a test email:
+Then, send a test email to an address of your choosing:
 
-`ruby mailchimp.rb 2021-july test robin@robinsloan.com`
+`ruby mailchimp.rb 2021-july test frodo@well.com`
 
 Spot an error? Edit the Markdown file, then update the campaign in Mailchimp:
 
