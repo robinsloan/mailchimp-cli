@@ -16,7 +16,7 @@ Spot an error? Edit the Markdown file, then update the campaign in Mailchimp:
 
 `ruby mailchimp.rb 2021-july update`
 
-You can also delete the campaign from Mailchimp (leaving the Markdown file intact, of course):
+You can also delete the campaign from Mailchimp (leaving the Markdown file intact):
 
 `ruby mailchimp.rb 2021-july delete`
 
