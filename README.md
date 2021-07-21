@@ -1,4 +1,4 @@
-# A minimalist Mailchimp CLI
+## A minimalist Mailchimp CLI
 
 I have not created a campaign by hand in Mailchimp in six months, instead happily managing them using this script, so I thought I'd share it.
 
@@ -24,6 +24,18 @@ That's it! There is currently no way to send from the command line, because the 
 
 The template is in `template.html` and is presently very minimal. You can replace it, of course, with an HTML email template from elsewhere on Github or one of your own devising. Note the `__YIELD__`.
 
+The basic configuration, including your Mailchimp API key, is stored in a file called `config.yaml` which you'll have to create yourself. It has this form:
+
+```
+api_key: "foo"
+list_id: "bar"
+data_center: "blee"
+from_name: "Frodo Baggins"
+reply_to: "frodo@well.com"
+```
+
+Note that by `list_id` I mean the ID of your Mailchimp audience; [instructions for finding that ID are here](https://mailchimp.com/help/find-audience-id/).
+
 As you'll see, this system is designed to send campaigns to audience segments based on tags. That is *probably* not what you want, so you'll have to rip out that logic, which is easily done: just delete `"segment_opts" => segment_options` in `update_campaign_content`.
 
-In general, I don't really expect this to be used as-is by anyone else, but it would have been a helpful starting point for me, six months ago, so now it can be a starting point for you!
+I don't really expect this to be used as-is by anyone else, but it would have been a helpful starting point for me, six months ago, so now it can be a starting point for you!
