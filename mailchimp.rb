@@ -5,6 +5,19 @@ require "yaml/store"
 require "MailchimpMarketing"
 require "roadie"
 
+unless File.exist?("config.yaml")
+  puts "You need to create a file called config.yaml that contains your Mailchimp API key and some other configuration info. Look in mailchimp.rb for a template."
+  exit
+end
+
+# config.yaml template:
+# ---
+# api_key: "foo"
+# list_id: "bar"
+# data_center: "blee"
+# from_name: "Frodo Baggins"
+# reply_to: "frodo@well.com"
+
 CONFIG = YAML.load_file("config.yaml")
 API_KEY = CONFIG["api_key"]
 LIST_ID = CONFIG["list_id"]
