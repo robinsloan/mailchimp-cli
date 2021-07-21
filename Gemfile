@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+gem "httparty"
+gem "kramdown"
+gem "front_matter_parser"
+gem "MailchimpMarketing"
+gem "roadie", "~> 4.0"
